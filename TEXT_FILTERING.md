@@ -26,7 +26,7 @@ Formatted dollar amounts 		/\$[0-9]*\.[0-9][0-9]/
 ```
 	sed -n '/0\.[0-9][0-9]$/p' input_file    (-n avoid printing line, and "p" means print)
 	sed '/^[Mm]ango/d' input_file 			 ("d" means delete)
-	sed 's/eqal/equal/g' input_file 		 ("s" means substitute and "g" means global substitution)
+	sed -i 's/eqal/equal/g' input_file 		 ("s" means substitute and "g" means global substitution)
 	sed -e 's/Paech/Peach/' -e 's/ *[0-9][0-9]*\.[0-9][0-9]$/\$&/'   (-e multiple commands, "&" resue the string matched pattern1 in patter2)
 ```
 
