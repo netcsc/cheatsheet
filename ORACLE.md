@@ -5,6 +5,7 @@ select count(1) from v$process;
 alter system set PROCESSES=2000 scope = spfile;
 alter system set db_files=2000 scope=spfile;
 shutdown immediate;
+startup;
 show pdbs;
 ```
 
